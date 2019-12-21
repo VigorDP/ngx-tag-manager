@@ -1,0 +1,16 @@
+{
+  "name": "ngx-img-upload",
+  "version": "1.0.0",
+  "description": "angular 图片上传组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "图片上传",
+    "angular",
+    "ng-zerro-antd"
+  ],
+  "author": "风之化身",
+  "license": "MIT"
+}
