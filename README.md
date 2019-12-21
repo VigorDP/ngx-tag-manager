@@ -24,6 +24,7 @@ import { ImgUploadComponent } from 'ngx-img-upload';
 ### 说明
 
 - 输入属性
+
   number:数字，控制想上传几张图片
 
   inputUrls: 字符串数组，用已有的图片地址初始化该组件
@@ -31,4 +32,5 @@ import { ImgUploadComponent } from 'ngx-img-upload';
   action: 字符串，表示上传的接口地址
 
 - 输出属性
+
   getImgUrl 当图片上传成功时会发出此事件，返回已上传的图片地址
