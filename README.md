@@ -1,10 +1,10 @@
-## ngx-img-upload
+## ngx-tag-manager
 
 Angular 中一种通用业务组件，标签管理器
 
 使用场景：文章分类标签、公告类型标签等
 
-![](./tag-manager.gif)
+![ngx-tag-manager](./tag-manager.gif)
 
 ### 基本使用
 
