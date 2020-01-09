@@ -12,5 +12,9 @@
     "ng-zerro-antd"
   ],
   "author": "风之化身",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@angular/core": "^8.2.14",
+    "ng-zorro-antd": "^8.5.2"
+  }
 }
