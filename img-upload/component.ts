@@ -1,27 +1,34 @@
 // @ts-nocheck
-import { Component, EventEmitter, OnInit, Input, Output, OnChanges } from '@angular/core';
-import { UploadFile, NzMessageService } from 'ng-zorro-antd';
+import {
+  Component,
+  EventEmitter,
+  OnInit,
+  Input,
+  Output,
+  OnChanges
+} from "@angular/core";
+import { UploadFile, NzMessageService } from "ng-zorro-antd";
 
 @Component({
-  selector: 'app-img-upload',
-  templateUrl: './index.html',
-  styles: [],
+  selector: "app-img-upload",
+  templateUrl: "./index.html",
+  styles: []
 })
 export class ImgUploadComponent implements OnInit, OnChanges {
   @Input() number = 1;
   @Input() inputUrls = [];
   @Output() public getImgUrl = new EventEmitter<any>();
 
-  action = '/hl/manager/uploader/img/upload';
+  action = "/hl/manager/uploader/img/upload";
 
   showUploadList = {
     showPreviewIcon: true,
     showRemoveIcon: true,
-    hidePreviewIconInNonImage: true,
+    hidePreviewIconInNonImage: true
   };
 
   fileList = [];
-  previewImage: string | undefined = '';
+  previewImage: string | undefined = "";
   previewVisible = false;
 
   constructor(private msg: NzMessageService) {}
@@ -33,11 +40,11 @@ export class ImgUploadComponent implements OnInit, OnChanges {
   ngOnChanges() {
     this.fileList = this.inputUrls.filter(Boolean).map((url, key) => ({
       uid: key,
-      status: 'done',
+      status: "done",
       response: {
-        link: url,
+        link: url
       },
-      url,
+      url
     }));
   }
 
@@ -47,14 +54,16 @@ export class ImgUploadComponent implements OnInit, OnChanges {
   };
 
   handleUpload(e) {
-    if (e.type === 'success' || e.type === 'removed') {
+    if (e.type === "success" || e.type === "removed") {
       this.getImgUrl.emit(this.urls);
-    } else if (e.type === 'error') {
-      this.msg.info('上传失败');
+    } else if (e.type === "error") {
+      this.msg.info("上传失败");
     }
   }
 
   get urls() {
-    return this.fileList.map(file => file.status === 'done' && file.response.data).filter(Boolean);
+    return this.fileList
+      .map(file => file.status === "done" && file.response.data)
+      .filter(Boolean);
   }
 }
