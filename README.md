@@ -32,7 +32,7 @@ import { TagManagerComponent } from 'ngx-tag-manager';
   [saveApi]="api.saveTag" [deleteApi]="api.deleteTag" (close)="showTagManager=false"></app-tag-manager>
 ```
 
-### 说明
+### API
 
 - 输入属性
 
