@@ -1,1 +1,1 @@
-export * from './img-upload/component'
+export * from './tag-manager/component'
