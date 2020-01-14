@@ -1,3 +1,12 @@
+## 1.0.4 (2020-01-14)
+
+
+### Features
+
+* **弹窗文案控制:** 新增弹窗文案控制 ([a6188f8](https://github.com/fengyinchao/ngx-tag-manager/commit/a6188f8d6bf61840d0f1edde05a971213edfae21))
+
+
+
 ## ngx-tag-manager
 
 Angular 中一种通用业务组件，标签管理器
@@ -29,7 +38,7 @@ import { TagManagerComponent } from 'ngx-tag-manager';
 </button>
 
 <app-tag-manager [show]="showTagManager" label="标签" [listApi]="api.getTagList"
-  [saveApi]="api.saveTag" [deleteApi]="api.deleteTag" (close)="showTagManager=false"></app-tag-manager>
+  [saveApi]="api.saveTag" [deleteApi]="api.deleteTag" (closeEvent)="showTagManager=false"></app-tag-manager>
 ```
 
 ### API
@@ -48,4 +57,4 @@ import { TagManagerComponent } from 'ngx-tag-manager';
 
 - 输出属性
 
-  close 关闭标签弹窗事件
+  closeEvent 关闭标签弹窗事件
