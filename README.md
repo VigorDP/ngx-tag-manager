@@ -1,11 +1,9 @@
-## 1.0.5 (2020-01-14)
-
+## 1.0.6 (2020-01-14)
 
 ### Features
 
-* **弹窗文案控制:** 新增弹窗文案控制 ([a6188f8](https://github.com/fengyinchao/ngx-tag-manager/commit/a6188f8d6bf61840d0f1edde05a971213edfae21))
-
-
+- **readme:** 完善 readme，使用方式改变 app-tag-manager => ngx-tag-manager ([ea2a880](https://github.com/fengyinchao/ngx-tag-manager/commit/ea2a8809111218be006f5141422434badaf0cf80))
+- **弹窗文案控制:** 新增弹窗文案控制 ([a6188f8](https://github.com/fengyinchao/ngx-tag-manager/commit/a6188f8d6bf61840d0f1edde05a971213edfae21))
 
 ## ngx-tag-manager
 
