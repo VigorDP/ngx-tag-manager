@@ -2,6 +2,7 @@
 import {
   Component,
   EventEmitter,
+  OnInit,
   Input,
   Output,
   OnChanges,
@@ -26,13 +27,14 @@ import {
   templateUrl: "./index.html",
   styles: []
 })
-export class TagManagerComponent implements OnChanges {
+export class TagManagerComponent implements OnInit, OnChanges {
   @Input() show = false;
   @Input() noticeCate;
+  @Input() label = "标签";
   @Input() listApi;
   @Input() saveApi;
   @Input() deleteApi;
-  @Output() public close = new EventEmitter<any>();
+  @Output() public closeEvent = new EventEmitter<any>();
 
   isVisible = false;
   agoName = undefined;
@@ -44,7 +46,7 @@ export class TagManagerComponent implements OnChanges {
   selectedRows = selectedRows;
   selectedRow = selectedRow;
   columns: STColumn[] = [
-    { title: "标签", index: "name" },
+    { title: this.label, index: "name" },
     {
       title: "操作",
       buttons: [
@@ -78,6 +80,10 @@ export class TagManagerComponent implements OnChanges {
     public modalSrv: NzModalService,
     private cdr: ChangeDetectorRef
   ) {}
+
+  ngOnInit() {
+    this.columns[0].title = this.label;
+  }
 
   ngOnChanges(e) {
     this.isVisible = e && e.show && e.show.currentValue;
@@ -113,7 +119,7 @@ export class TagManagerComponent implements OnChanges {
       this.agoName = undefined;
     }
     this.modalSrv.create({
-      nzTitle: type === "add" ? "新增标签" : "编辑标签",
+      nzTitle: type === "add" ? "新增" + this.label : "编辑" + this.label,
       nzContent: tpl,
       nzWidth: 400,
       nzOnOk: () => {
@@ -143,7 +149,7 @@ export class TagManagerComponent implements OnChanges {
   checkTagValid() {
     const { name } = this.selectedRow;
     if (!name) {
-      this.msg.info("请输入标签名称");
+      this.msg.info("请输入" + this.label + "名称");
       return false;
     }
     return true;
@@ -167,6 +173,6 @@ export class TagManagerComponent implements OnChanges {
 
   handleClose(): void {
     this.isVisible = false;
-    this.close.emit();
+    this.closeEvent.emit();
   }
 }

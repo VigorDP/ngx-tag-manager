@@ -28,7 +28,7 @@ import { TagManagerComponent } from 'ngx-tag-manager';
   <span>标签管理</span>
 </button>
 
-<app-tag-manager [show]="showTagManager" [listApi]="api.getTagList"
+<app-tag-manager [show]="showTagManager" label="标签" [listApi]="api.getTagList"
   [saveApi]="api.saveTag" [deleteApi]="api.deleteTag" (close)="showTagManager=false"></app-tag-manager>
 ```
 
@@ -37,6 +37,8 @@ import { TagManagerComponent } from 'ngx-tag-manager';
 - 输入属性
 
   show:boolean，控制标签弹窗的显示
+
+  label: 弹窗文案控制，默认“标签”，如果用于岗位管理，则传入“岗位”,弹窗文案会变为岗位管理，新增岗位等等
 
   listApi: 标签列表接口
 

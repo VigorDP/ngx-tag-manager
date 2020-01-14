@@ -1,10 +1,11 @@
 {
   "name": "ngx-tag-manager",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "angular 标签管理弹窗组件",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "change-log": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "keywords": [
     "标签管理弹窗组件",
@@ -21,5 +22,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/fengyinchao/ngx-tag-manager.git"
+  },
+  "devDependencies": {
+    "conventional-changelog": "3.1.18"
   }
 }
