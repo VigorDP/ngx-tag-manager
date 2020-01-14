@@ -1,4 +1,3 @@
-// @ts-nocheck
 import {
   Component,
   EventEmitter,
@@ -20,10 +19,10 @@ import {
   selectedRow,
   selectedRows,
   total
-} from "./interfaces";
+} from "./interface";
 
 @Component({
-  selector: "app-tag-manager",
+  selector: "ngx-tag-manager",
   templateUrl: "./index.html",
   styles: []
 })
@@ -81,16 +80,16 @@ export class TagManagerComponent implements OnInit, OnChanges {
     private cdr: ChangeDetectorRef
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): any {
     this.columns[0].title = this.label;
   }
 
-  ngOnChanges(e) {
+  ngOnChanges(e): any {
     this.isVisible = e && e.show && e.show.currentValue;
     this.isVisible && this.getTagData();
   }
 
-  getTagData() {
+  getTagData(): any {
     this.loading = true;
     this.listApi({ noticeCate: this.noticeCate }).subscribe(res => {
       this.loading = false;
@@ -99,7 +98,7 @@ export class TagManagerComponent implements OnInit, OnChanges {
     });
   }
 
-  tagStChange(e: STChange) {
+  tagStChange(e: STChange): any {
     switch (e.type) {
       case "filter":
         this.getTagData();
@@ -114,7 +113,7 @@ export class TagManagerComponent implements OnInit, OnChanges {
     }
   }
 
-  addOrEditTag(tpl: TemplateRef<{}>, type: "add" | "edit") {
+  addOrEditTag(tpl: TemplateRef<{}>, type: "add" | "edit"): any {
     if (type === "add") {
       this.agoName = undefined;
     }
@@ -146,7 +145,7 @@ export class TagManagerComponent implements OnInit, OnChanges {
     });
   }
 
-  checkTagValid() {
+  checkTagValid(): boolean {
     const { name } = this.selectedRow;
     if (!name) {
       this.msg.info("请输入" + this.label + "名称");
@@ -155,7 +154,7 @@ export class TagManagerComponent implements OnInit, OnChanges {
     return true;
   }
 
-  deleteTag() {
+  deleteTag(): any {
     this.modalSrv.confirm({
       nzTitle: "是否确定删除该项？",
       nzOkType: "danger",

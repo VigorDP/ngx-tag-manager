@@ -1,4 +1,4 @@
-## 1.0.4 (2020-01-14)
+## 1.0.5 (2020-01-14)
 
 
 ### Features
@@ -37,8 +37,8 @@ import { TagManagerComponent } from 'ngx-tag-manager';
   <span>标签管理</span>
 </button>
 
-<app-tag-manager [show]="showTagManager" label="标签" [listApi]="api.getTagList"
-  [saveApi]="api.saveTag" [deleteApi]="api.deleteTag" (closeEvent)="showTagManager=false"></app-tag-manager>
+<ngx-tag-manager [show]="showTagManager" label="标签" [listApi]="api.getTagList"
+  [saveApi]="api.saveTag" [deleteApi]="api.deleteTag" (closeEvent)="showTagManager=false"></ngx-tag-manager>
 ```
 
 ### API
@@ -48,6 +48,8 @@ import { TagManagerComponent } from 'ngx-tag-manager';
   show:boolean，控制标签弹窗的显示
 
   label: 弹窗文案控制，默认“标签”，如果用于岗位管理，则传入“岗位”,弹窗文案会变为岗位管理，新增岗位等等
+
+  cate: 分类，标识哪一类标签，比如可以是文章的标签，也可以是岗位的标签
 
   listApi: 标签列表接口
 
