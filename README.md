@@ -1,8 +1,9 @@
-## 1.0.7 (2020-01-14)
+## 1.1.7 (2020-01-15)
 
 ### Features
 
 - **readme:** 完善 readme，使用方式改变 app-tag-manager => ngx-tag-manager ([ea2a880](https://github.com/fengyinchao/ngx-tag-manager/commit/ea2a8809111218be006f5141422434badaf0cf80))
+- **大更新:** 将导入组件方式改为导入模块，更具有通用性 ([1dc9721](https://github.com/fengyinchao/ngx-tag-manager/commit/1dc9721769796f3e115d56d1bfb1a7345e36b1b8))
 - **弹窗文案控制:** 新增弹窗文案控制 ([a6188f8](https://github.com/fengyinchao/ngx-tag-manager/commit/a6188f8d6bf61840d0f1edde05a971213edfae21))
 
 ## ngx-tag-manager
@@ -47,11 +48,11 @@ import { NgxTagManagerModule } from 'ngx-tag-manager';
 
   cate: 分类，标识哪一类标签，比如可以是文章的标签，也可以是岗位的标签
 
-  listApi: 标签列表接口
+  listApi: 标签列表接口，GET/POST 参数 cate 标识分类
 
-  saveApi: 新增或修改标签接口
+  saveApi: 新增或修改标签接口 POST 参数 id,name,cate
 
-  deleteApi: 删除标签接口
+  deleteApi: 删除标签接口 POST 参数 id
 
 - 输出属性
 
