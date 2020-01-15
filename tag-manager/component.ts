@@ -28,7 +28,7 @@ import {
 })
 export class TagManagerComponent implements OnInit, OnChanges {
   @Input() show = false;
-  @Input() noticeCate;
+  @Input() cate;
   @Input() label = "标签";
   @Input() listApi;
   @Input() saveApi;
@@ -86,12 +86,13 @@ export class TagManagerComponent implements OnInit, OnChanges {
 
   ngOnChanges(e): any {
     this.isVisible = e && e.show && e.show.currentValue;
+    // tslint:disable-next-line: no-unused-expression
     this.isVisible && this.getTagData();
   }
 
   getTagData(): any {
     this.loading = true;
-    this.listApi({ noticeCate: this.noticeCate }).subscribe(res => {
+    this.listApi({ cate: this.cate }).subscribe(res => {
       this.loading = false;
       this.data = res.data || [];
       this.cdr.detectChanges();
@@ -127,7 +128,7 @@ export class TagManagerComponent implements OnInit, OnChanges {
             this.saveApi({
               ...this.selectedRow,
               agoName: this.agoName,
-              noticeCate: this.noticeCate
+              cate: this.cate
             }).subscribe(res => {
               if (res.code === "0") {
                 resolve();

@@ -1,4 +1,4 @@
-## 1.0.6 (2020-01-14)
+## 1.0.7 (2020-01-14)
 
 ### Features
 
@@ -16,17 +16,15 @@ Angular 中一种通用业务组件，标签管理器
 ### 基本使用
 
 ```
-npm i ngx-tag-manager
+npm i ngx-tag-manager -D
 
 // 注册组件
-import { TagManagerComponent } from 'ngx-tag-manager';
+import { NgxTagManagerModule } from 'ngx-tag-manager';
 @NgModule({
-  declarations: [
-    TagManagerComponent
-  ],
-  exports: [
-    TagManagerComponent
-  ],
+  imports:[
+    ...,
+    NgxTagManagerModule
+  ]
 })
 // 使用组件
 
@@ -35,7 +33,7 @@ import { TagManagerComponent } from 'ngx-tag-manager';
   <span>标签管理</span>
 </button>
 
-<ngx-tag-manager [show]="showTagManager" label="标签" [listApi]="api.getTagList"
+<ngx-tag-manager [show]="showTagManager" cate="ARTICLE" label="标签" [listApi]="api.getTagList"
   [saveApi]="api.saveTag" [deleteApi]="api.deleteTag" (closeEvent)="showTagManager=false"></ngx-tag-manager>
 ```
 

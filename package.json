@@ -1,6 +1,6 @@
 {
   "name": "ngx-tag-manager",
-  "version": "1.0.6",
+  "version": "1.1.7",
   "description": "angular 标签管理弹窗组件",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,11 @@
   "author": "风之化身",
   "license": "MIT",
   "dependencies": {
+    "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14",
+    "@angular/forms": "^8.2.14",
     "@delon/abc": "^8.8.0",
+    "@delon/form": "^8.8.0",
     "ng-zorro-antd": "^8.5.2"
   },
   "repository": {

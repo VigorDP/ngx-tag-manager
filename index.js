@@ -1,1 +1,1 @@
-export * from './tag-manager/component'
+export * from './tag-manager/tag-manager.module'
