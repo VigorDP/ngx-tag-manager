@@ -13,6 +13,7 @@ import { TagManagerComponent } from "./component";
     NgZorroAntdModule,
     DelonABCModule,
     DelonFormModule,
+    AlainThemeModule,
     CommonModule,
     ReactiveFormsModule,
     FormsModule
