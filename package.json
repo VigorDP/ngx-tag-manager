@@ -1,6 +1,6 @@
 {
   "name": "ngx-tag-manager",
-  "version": "1.2.3",
+  "version": "1.2.6",
   "description": "angular 标签管理弹窗组件",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,7 @@
     "@angular/forms": "^8.2.14",
     "@delon/abc": "^8.8.0",
     "@delon/form": "^8.8.0",
+    "@delon/theme": "^8.8.0",
     "ng-zorro-antd": "^8.5.2"
   },
   "repository": {

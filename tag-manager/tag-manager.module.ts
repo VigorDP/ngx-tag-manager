@@ -1,11 +1,9 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 import { NgZorroAntdModule } from "ng-zorro-antd";
-
 import { DelonABCModule } from "@delon/abc";
 import { DelonFormModule } from "@delon/form";
-
 import { TagManagerComponent } from "./component";
 
 @NgModule({
@@ -13,9 +11,7 @@ import { TagManagerComponent } from "./component";
     NgZorroAntdModule,
     DelonABCModule,
     DelonFormModule,
-    AlainThemeModule,
     CommonModule,
-    ReactiveFormsModule,
     FormsModule
   ],
   declarations: [TagManagerComponent],
