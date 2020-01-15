@@ -1,6 +1,6 @@
 {
   "name": "ngx-tag-manager",
-  "version": "1.1.7",
+  "version": "1.2.1",
   "description": "angular 标签管理弹窗组件",
   "main": "index.js",
   "scripts": {
